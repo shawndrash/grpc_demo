@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package="https://github.com/shawndrash/grpc_demo";
+// 定义包名
+package grpc_demo;
+
+service Gretter {
+    rpc GetGreeting(GreetingRequest) returns (GreetingResponse) {}
+}
+
+message GreetingRequest {
+    string name = 1;
+}
+
+message GreetingResponse {
+    string greeting = 1;
+}
